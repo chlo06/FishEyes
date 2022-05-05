@@ -42,3 +42,24 @@
   cursor: pointer;
   background-color: white;
 }
+#coeur {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  color: #901c1c;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: white;
+}
+#coeurVide {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  gap: 5px;
+  color: #901c1c;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: white;
+}

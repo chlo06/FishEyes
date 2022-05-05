@@ -74,17 +74,23 @@ function setProfilMedia(media) {
   listMedia = document.querySelectorAll("#profil__media li");
   sortMedia("likes");
 }
-
+// Fonction d'incrémentation des likes 
 function likeEvent(event) {
   let classList = event.classList;
   let likeContainer = classList.contains("like") ? event : event.parentNode;
   let likeText = likeContainer.firstElementChild;
+  let coeur = document.getElementById("coeur");
+  let coeurVide = document.getElementById("coeurVide");
   if (likeContainer.classList.contains("liked")) {
     likeText.innerText = parseInt(likeText.innerText) - 1;
     allLikes -= 1;
+    coeurVide.style.display = "flex";
+    coeur.style.display = "none";
   } else {
     likeText.innerText = parseInt(likeText.innerText) + 1;
     allLikes += 1;
+    coeurVide.style.display = "none";
+    coeur.style.display = "flex";
   }
   setSectionInfo(null, null, true);
   likeContainer.classList.toggle("liked");
